@@ -12,31 +12,74 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textAlignment="center"
-        android:textColor="#000"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_detect" />
 
-    <ImageView
-        android:id="@+id/img"
-        android:layout_width="250dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="32dp"
+    <TextView
+        android:id="@+id/detectedTex"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
+        android:ellipsize="start"
+
+        android:padding="16dp"
+        android:text="העלאת ספח תעודת זהות"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/s" />
+        tools:layout_editor_absoluteY="61dp" />
+
+    <Button
+        android:id="@+id/BSelectImage"
+        android:layout_width="195dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="@color/black"
+        android:drawableLeft="@drawable/ic_baseline_image_24"
+        android:padding="16dp"
+        android:text="העלה תמונה "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detectedTex" />
+
+    <ImageView
+        android:id="@+id/IVPreviewImage"
+        android:layout_width="157dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="264dp"
+        app:layout_constraintCircleRadius="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_detect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="וודא שאני הורה "
+
+        android:layout_width="177dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/black"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        android:padding="16dp"
+        android:text="לחץ לבדיקה  "
+        android:textColor="@color/white"
+
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img" />
+        app:layout_constraintTop_toBottomOf="@+id/IVPreviewImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
